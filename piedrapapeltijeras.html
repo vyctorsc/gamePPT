@@ -7,11 +7,16 @@
     <script>
         // 1 es piedra, papel es 2 y 3 es tijeras
         let jugador = 0
-        let pc = 2
+        let min = 1
+        let max = 2
 
+        //eleccion Aleatoria de pc atraves de funciones
+        let pc = Math.floor(Math.random() * (max - min + 1) + min)
+
+        //Eleccion de jugador por teclado
         jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijersd")
-        alert("Elegiste "+ jugador)
-
+        
+        //Validacion de eleccion jugador
         if(jugador == 1){
             alert("Elegiste Piedra 🪨")
         } else if(jugador == 2){
@@ -22,7 +27,7 @@
             alert("opcion no valida")
         }
 
-        //Eleccion de pc
+        // Validacion de Eleccion de pc
         if(pc == 1){
             alert("Pc elige Piedra 🪨")
         } else if(pc == 2){
@@ -46,6 +51,8 @@
     </script>
 </head>
 <body>
-    
+    <h1>Game - Piedra, Papel, Tijera</h1>
+
+    <p>El juego <strong>Piedra, Papel, Tijera</strong> es uno de los juegos mas representativos de nuestra infancia</p>
 </body>
 </html>
