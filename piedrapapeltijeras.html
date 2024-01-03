@@ -9,6 +9,20 @@
         function numAleatorio(min, max) {
             return (Math.floor(Math.random() * (max - min + 1) + min))
         }
+
+        function eligirOpcion(opcion) {
+            let result = " "
+            if(opcion == 1){
+                result = "Piedra 🪨"
+            } else if(opcion == 2){
+                result = "Papel 🧻"
+            } else if(opcion == 3){
+                result = "Tijera ✂️"
+            } else {
+                result = "opcion no valida"
+            }
+            return result
+        }
         // Inicializando Variables
         let jugador = 0
         let min = 1
@@ -20,7 +34,12 @@
         //Eleccion de jugador por teclado
         jugador = prompt("Elige: 1 para piedra, 2 para papel, 3 para tijera")
         
+        alert("PC elige: " + eligirOpcion(pc))
+        alert("PC elige: " + eligirOpcion(jugador))
+
+
         //Validacion de eleccion jugador
+        /*
         if(jugador == 1){
             alert("Elegiste Piedra 🪨")
         } else if(jugador == 2){
@@ -39,7 +58,7 @@
         } else if(pc == 3){
             alert("Pc elige Tijera ✂️")
         } 
-
+        */
         //Combate
         if (pc == jugador) {
             alert("EMPATE")
